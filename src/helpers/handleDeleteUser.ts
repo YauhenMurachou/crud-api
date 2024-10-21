@@ -17,8 +17,6 @@ export function handleDeleteUser(_req: http.IncomingMessage, res: http.ServerRes
 
   const userIndex = users.findIndex(u => u.id === userId);
 
-	console.log('userIndex', userIndex);
-
   if (userIndex === -1) {
     sendJsonResponse(res, 404, { message: 'User not found' });
     return;
